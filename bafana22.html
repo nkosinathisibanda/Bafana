@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Protective Security Risk Management offers professional security training, risk management, compliance and operational support in South Africa.">
+  <title>Protective Security Risk Management | Fananaye Gumede</title>
+
+  <style>
+    :root {
+      --navy: #101e32;
+      --navy-deep: #0a1423;
+      --blue: #28516b;
+      --slate: #344b61;
+      --champagne: #b8a77d;
+      --cream: #e8e5dc;
+      --muted: #aeb9c5;
+      --line: rgba(210,220,230,.15);
+      --panel: rgba(255,255,255,.045);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--navy-deep);
+      color: var(--cream);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    /* Top bar */
+
+    .topbar {
+      background: #0d1a2b;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .82rem;
+      padding: 9px 0;
+    }
+
+    .topbar .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    /* Header and logo */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: #fff;
+      border-bottom: 1px solid #e4e8ec;
+    }
+
+    nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      text-decoration: none;
+      min-width: 190px;
+    }
+
+    .sr-symbol {
+      color: #123D5A;
+      font-size: 58px;
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: -1px;
+    }
+
+    .sr-divider {
+      width: 2px;
+      height: 65px;
+      background: #7893A3;
+    }
+
+    .sr-wording {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      white-space: nowrap;
+    }
+
+    .sr-main {
+      color: #123D5A;
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+    .sr-sub {
+      color: var(--champagne);
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: #25384a;
+      font-size: .88rem;
+    }
+
+    .navlinks a:hover {
+      color: #a28c5b;
+    }
+
+    .nav-cta,
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 19px;
+      border: 1px solid var(--champagne);
+      color: var(--cream);
+      font-size: .83rem;
+      letter-spacing: .04em;
+      transition: .2s ease;
+    }
+
+    .nav-cta {
+      color: var(--navy);
+      border-color: var(--champagne);
+    }
+
+    .nav-cta:hover,
+    .btn:hover {
+      background: var(--champagne);
+      color: var(--navy-deep);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      color: var(--navy);
+      border: 1px solid #d5dce3;
+      padding: 8px 11px;
+      font-size: 1.2rem;
+    }
+
+    /* Hero */
+
+    .hero {
+      background:
+        radial-gradient(ellipse at 80% 20%, rgba(40,81,107,.42), transparent 42%),
+        linear-gradient(115deg, #101e32 0%, #172c43 62%, #203b52 100%);
+      padding: 105px 0 100px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      color: var(--champagne);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: .72rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      max-width: 820px;
+      font-family: Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(2.7rem,6vw,5.4rem);
+      line-height: 1.06;
+      letter-spacing: -.035em;
+    }
+
+    h1 span {
+      color: var(--champagne);
+    }
+
+    .hero-copy {
+      max-width: 660px;
+      color: #c0cad4;
+      font-size: 1.06rem;
+      margin: 26px 0 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn.primary {
+      background: var(--champagne);
+      color: var(--navy-deep);
+    }
+
+    .btn.primary:hover {
+      background: #d0c19c;
+    }
+
+    .hero-note {
+      margin-top: 60px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    .hero-note strong {
+      display: block;
+      color: var(--cream);
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    /* General sections */
+
+    section {
+      padding: 88px 0;
+    }
+
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 42px;
+    }
+
+    .section-head h2 {
+      font: 400 clamp(2rem,4vw,3.25rem)/1.13 Georgia,serif;
+      margin-bottom: 17px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+    }
+
+    /* Overview */
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .intro-grid h2 {
+      font: 400 clamp(2rem,4vw,3.1rem)/1.15 Georgia,serif;
+    }
+
+    .intro-grid p {
+      color: var(--muted);
+      margin-top: 18px;
+    }
+
+    .principles {
+      border-left: 2px solid var(--champagne);
+      padding: 4px 0 4px 26px;
+    }
+
+    .principles h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .principles p {
+      margin: 0 0 25px;
+      font-size: .92rem;
+    }
+
+    /* Services */
+
+    .services {
+      background: #111f33;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 14px;
+    }
+
+    .service-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 25px 22px;
+      min-height: 190px;
+    }
+
+    .service-number {
+      color: var(--champagne);
+      font-size: .72rem;
+      letter-spacing: .16em;
+    }
+
+    .service-card h3 {
+      font: 400 1.22rem/1.3 Georgia,serif;
+      margin: 22px 0 10px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    /* Approach */
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 28px;
+    }
+
+    .step {
+      border-top: 1px solid var(--champagne);
+      padding-top: 18px;
+    }
+
+    .step b {
+      color: var(--champagne);
+      font-size: .75rem;
+      letter-spacing: .13em;
+    }
+
+    .step h3 {
+      font: 400 1.35rem Georgia,serif;
+      margin: 13px 0 8px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* Founder */
+
+    .founder {
+      background: linear-gradient(115deg,#172b42,#101e32);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .founder-grid {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .founder-photo {
+      min-height: 460px;
+      background: #243b52;
+      border: 1px solid rgba(184,167,125,.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .founder-photo img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-placeholder {
+      padding: 30px;
+      text-align: center;
+      color: #c4cfda;
+      font-size: .9rem;
+    }
+
+    .founder-copy h2 {
+      font: 400 clamp(2.2rem,4vw,3.5rem)/1.1 Georgia,serif;
+      margin: 10px 0 8px;
+    }
+
+    .role {
+      color: var(--champagne);
+      font-size: .85rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .founder-copy p {
+      color: var(--muted);
+      margin: 18px 0;
+    }
+
+    .credentials {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 20px;
+      margin-top: 24px;
+    }
+
+    .credentials div {
+      border-top: 1px solid var(--line);
+      padding: 10px 0;
+      color: #d7dde4;
+      font-size: .88rem;
+    }
+
+    .credentials div:before {
+      content: "— ";
+      color: var(--champagne);
+    }
+
+    /* Operational exposure */
+
+    .experience {
+      background: #0d1929;
+    }
+
+    .experience-copy {
+      max-width: 850px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    /* Contact */
+
+    .contact {
+      background: #172b42;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 60px;
+    }
+
+    .contact h2 {
+      font: 400 clamp(2.1rem,4vw,3.2rem)/1.12 Georgia,serif;
+      margin-bottom: 18px;
+    }
+
+    .contact-intro {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .contact-detail {
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+      color: #d5dce3;
+    }
+
+    .contact-detail small {
+      display: block;
+      color: var(--champagne);
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      font-size: .68rem;
+      margin-bottom: 4px;
+    }
+
+    form {
+      background: rgba(8,18,31,.35);
+      border: 1px solid var(--line);
+      padding: 30px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    label {
+      display: block;
+      color: #cbd4dd;
+      font-size: .78rem;
+      margin-bottom: 7px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      background: #0d1b2c;
+      border: 1px solid rgba(210,220,230,.2);
+      color: var(--cream);
+      padding: 13px 12px;
+      font: inherit;
+      font-size: .88rem;
+      margin-bottom: 16px;
+      border-radius: 0;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 1px solid var(--champagne);
+      border-color: var(--champagne);
+    }
+
+    form button {
+      cursor: pointer;
+      background: var(--champagne);
+      color: var(--navy-deep);
+      border: 0;
+      padding: 14px 22px;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: .72rem;
+      margin-top: 12px;
+    }
+
+    /* Footer */
+
+    footer {
+      background: #081321;
+      padding: 26px 0;
+      color: #8795a4;
+      font-size: .78rem;
+    }
+
+    footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .service-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .approach-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .founder-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .founder-photo {
+        max-width: 520px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .topbar .wrap {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        min-height: 72px;
+      }
+
+      .brand {
+        gap: 10px;
+      }
+
+      .sr-symbol {
+        font-size: 38px;
+      }
+
+      .sr-divider {
+        height: 34px;
+      }
+
+      .sr-main,
+      .sr-sub {
+        font-size: 13px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .navlinks {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 20px 5%;
+        border-bottom: 1px solid #e4e8ec;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 17px;
+      }
+
+      .navlinks.open {
+        display: flex;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero {
+        padding: 76px 0 70px;
+      }
+
+      .hero-note {
+        gap: 22px;
+        margin-top: 42px;
+      }
+
+      section {
+        padding: 66px 0;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: auto;
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 18px;
+      }
+
+      .founder-photo,
+      .founder-photo img {
+        min-height: 360px;
+        height: 360px;
+      }
+
+      .credentials {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      form {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="#home" aria-label="Protective Security Risk Management home">
+          <span class="sr-symbol">SR</span>
+          <span class="sr-divider"></span>
+          <span class="sr-wording">
+            <span class="sr-main">Protective Security</span>
+            <span class="sr-sub">Risk Management</span>
+          </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+        <div class="navlinks" id="navLinks">
+          <a href="#about">Overview</a>
+          <a href="#services">Services</a>
+          <a href="#approach">Our Approach</a>
+          <a href="#founder">Founder</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <a class="nav-cta" href="#contact">Discuss a Requirement</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+      <div class="wrap">
+        <div class="eyebrow">Professional security and risk management</div>
+
+        <h1>Stronger operations.<br><span>Safer environments.</span></h1>
+
+        <p class="hero-copy">
+          Practical security risk management, compliance training and operational support for organisations that need capable people, clear procedures and accountable performance.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#services">Explore Our Services</a>
+          <a class="btn" href="#contact">Speak to Us</a>
+        </div>
+
+        <div class="hero-note">
+          <div>
+            <strong>08 years</strong>
+            Security industry experience
+          </div>
+          <div>
+            <strong>Practical focus</strong>
+            Training and operational execution
+          </div>
+          <div>
+            <strong>South Africa</strong>
+            Based in Midrand, Gauteng
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+
+    <section id="about">
+      <div class="wrap intro-grid">
+        <div>
+          <div class="eyebrow">What we do</div>
+
+          <h2>Building capability, compliance and confidence in security operations.</h2>
+
+          <p>
+            Effective security is more than having people on site. It depends on informed supervisors, trained officers, consistent procedures and management that understands its responsibilities.
+          </p>
+
+          <p>
+            Protective Security Risk Management supports organisations through focused training and practical services designed to strengthen day-to-day security operations and workplace accountability.
+          </p>
+        </div>
+
+        <div class="principles">
+          <h3>Operational understanding</h3>
+          <p>Training grounded in the realities of security environments, site requirements and frontline responsibilities.</p>
+
+          <h3>Compliance in practice</h3>
+          <p>Helping teams understand procedures, service-level expectations and the importance of consistent execution.</p>
+
+          <h3>Accountable leadership</h3>
+          <p>Developing supervisors and managers who can identify risks, respond to incidents and manage people fairly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Our services</div>
+          <h2>Focused services for the demands of security operations.</h2>
+          <p>Training and support can be tailored to organisational requirements, site conditions and operational responsibilities.</p>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service-card">
+            <span class="service-number">01 / TRAINING</span>
+            <h3>Security Risk Management Training</h3>
+            <p>Understanding security risks, identifying vulnerabilities and applying practical risk-control measures.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">02 / COMPLIANCE</span>
+            <h3>Client SLA Agreement Compliance Training</h3>
+            <p>Helping teams understand service-level agreements, client expectations and operational standards.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">03 / LEADERSHIP</span>
+            <h3>Security Site Supervisors Specialised Training</h3>
+            <p>Strengthening site supervision, reporting, team coordination and decision-making.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">04 / TECHNOLOGY</span>
+            <h3>Information Technology for Supervisors</h3>
+            <p>Building confidence in the digital tools and information processes used in supervision.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">05 / MANAGEMENT</span>
+            <h3>Security Officers’ Compliance Management</h3>
+            <p>Supporting consistent standards, conduct, deployment and compliance across security teams.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">06 / LABOUR</span>
+            <h3>Labour Law Execution Training</h3>
+            <p>Practical guidance on applying workplace procedures and understanding relevant labour responsibilities.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">07 / DISCIPLINE</span>
+            <h3>Crucial Steps for Disciplinary Action</h3>
+            <p>Training on fair, consistent and properly documented disciplinary processes.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">08 / SUPPORT</span>
+            <h3>Disciplinary Action Handling Services</h3>
+            <p>Practical assistance with disciplinary matters and procedural handling, subject to agreed scope.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+
+    <section id="approach">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Our approach</div>
+          <h2>Clear process. Practical outcomes.</h2>
+          <p>Each engagement starts with understanding the organisation’s needs and ends with recommendations or training that can be put into practice.</p>
+        </div>
+
+        <div class="approach-grid">
+          <div class="step">
+            <b>STEP 01</b>
+            <h3>Understand</h3>
+            <p>Discuss the site, team, risks and operational requirements.</p>
+          </div>
+
+          <div class="step">
+            <b>STEP 02</b>
+            <h3>Assess</h3>
+            <p>Identify relevant gaps, challenges and areas requiring attention.</p>
+          </div>
+
+          <div class="step">
+            <b>STEP 03</b>
+            <h3>Develop</h3>
+            <p>Deliver focused training, guidance or agreed support.</p>
+          </div>
+
+          <div class="step">
+            <b>STEP 04</b>
+            <h3>Strengthen</h3>
+            <p>Reinforce accountability and practical application in the workplace.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDER -->
+
+    <section class="founder" id="founder">
+      <div class="wrap founder-grid">
+
+        <div class="founder-photo">
+          <img
+            src="founder.jpg"
+            alt="Fananaye Gumede, Founder and Principal Consultant"
+            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=&quot;photo-placeholder&quot;>Founder photograph<br><br>Add Fananaye Gumede’s photo as <strong>founder.jpg</strong> in the same folder as this HTML file.</div>'"
+          >
+        </div>
+
+        <div class="founder-copy">
+          <div class="eyebrow">Leadership</div>
+          <div class="role">Founder &amp; Principal Consultant</div>
+          <h2>Fananaye Gumede</h2>
+
+          <p>
+            Fananaye Gumede is a Safety and Security Risk Management Professional with eight years of experience in the security industry. His experience includes large-scale security operations, site safety, risk compliance, operational management, team leadership, hazard identification and incident response.
+          </p>
+
+          <p>
+            His professional focus is on strengthening operational standards through practical training, informed supervision and consistent application of workplace procedures.
+          </p>
+
+          <div class="credentials">
+            <div>Grade 12 certificate</div>
+            <div>Code 10 driver’s licence</div>
+            <div>PSIRA Grade A certificate</div>
+            <div>Knowledge of Criminal Procedure Act processes</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OPERATIONAL EXPOSURE -->
+
+    <section class="experience" id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Operational exposure</div>
+          <h2>Experience across demanding environments.</h2>
+
+          <p class="experience-copy">
+            Fananaye's operational experience includes exposure to security environments associated with BMW, MTN, Broll Properties and eThekwini Municipality, as well as operations in Welkom.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+
+        <div>
+          <div class="eyebrow">Get in touch</div>
+          <h2>Let’s discuss your operational requirements.</h2>
+
+          <p class="contact-intro">
+            Contact us to discuss training, compliance support or a specific security management requirement.
+          </p>
+
+          <div class="contact-detail">
+            <small>Telephone</small>
+            <a href="tel:0815909911">081 590 9911</a>
+          </div>
+
+          <div class="contact-detail">
+            <small>Email</small>
+            <a href="mailto:fananayeg@outlook.com">fananayeg@outlook.com</a>
+          </div>
+
+          <div class="contact-detail">
+            <small>Address</small>
+            840 Kite Street, Rabie Ridge Ext 01,<br>
+            Midrand, 1632, South Africa
+          </div>
+        </div>
+
+        <form id="contactForm">
+          <div class="form-row">
+            <div>
+              <label for="name">Full name</label>
+              <input id="name" name="name" required>
+            </div>
+
+            <div>
+              <label for="company">Company / organisation</label>
+              <input id="company" name="company">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" required>
+            </div>
+
+            <div>
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone">
+            </div>
+          </div>
+
+          <label for="service">Service of interest</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option>Security Risk Management Training</option>
+            <option>Client SLA Agreement Compliance Training</option>
+            <option>Security Site Supervisors Specialised Training</option>
+            <option>Information Technology for Supervisors</option>
+            <option>Security Officers’ Compliance Management</option>
+            <option>Labour Law Execution Training</option>
+            <option>Crucial Steps for Disciplinary Action</option>
+            <option>Disciplinary Action Handling Services</option>
+            <option>Other enquiry</option>
+          </select>
+
+          <label for="message">How can we assist?</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Prepare Enquiry</button>
+
+          <p class="form-note">
+            This form opens your email application with the enquiry details. It does not send or store information on this website.
+          </p>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="year"></span> Protective Security Risk Management. All rights reserved.</span>
+      <span>Security Risk Management • Training • Compliance</span>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.textContent = isOpen ? '×' : '☰';
+    });
+
+    document.querySelectorAll('.navlinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.textContent = '☰';
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const data = new FormData(this);
+
+      const subject = encodeURIComponent(
+        'Website enquiry - ' + (data.get('service') || 'General enquiry')
+      );
+
+      const body = encodeURIComponent(
+        'Name: ' + data.get('name') + '\n' +
+        'Company: ' + data.get('company') + '\n' +
+        'Email: ' + data.get('email') + '\n' +
+        'Phone: ' + data.get('phone') + '\n' +
+        'Service: ' + data.get('service') + '\n\n' +
+        'Message:\n' + data.get('message')
+      );
+
+      window.location.href =
+        'mailto:fananayeg@outlook.com?subject=' + subject + '&body=' + body;
+    });
+  </script>
+
+</body>
+</html>
