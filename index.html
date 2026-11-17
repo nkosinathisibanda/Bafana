@@ -82,12 +82,19 @@
     }
 
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      text-decoration: none;
-      min-width: 190px;
-    }
+  display: flex;
+  align-items: center;
+  min-width: 190px;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 260px;
+  height: 75px;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+}
 
     .sr-symbol {
       color: #123D5A;
@@ -602,7 +609,14 @@
       .topbar .wrap {
         justify-content: center;
         text-align: center;
+        
+        
       }
+      
+      .brand img {
+  width: 210px;
+  height: 60px;
+}
 
       nav {
         min-height: 72px;
@@ -710,13 +724,8 @@
     <div class="wrap">
       <nav>
         <a class="brand" href="#home" aria-label="Protective Security Risk Management home">
-          <span class="sr-symbol">SR</span>
-          <span class="sr-divider"></span>
-          <span class="sr-wording">
-            <span class="sr-main">Protective Security</span>
-            <span class="sr-sub">Risk Management</span>
-          </span>
-        </a>
+  <img src="Logo.JPG" alt="Protective Security Risk Management Logo">
+</a>
 
         <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 
@@ -1094,3 +1103,4 @@
 
 </body>
 </html>
+NG
