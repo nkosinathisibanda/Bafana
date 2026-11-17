@@ -117,7 +117,8 @@
     }
 
     .sr-sub {
-      color: var(--champagne);
+      color: red
+      ;
       font-size: 25px;
       font-weight: 700;
     }
@@ -169,14 +170,28 @@
 
     /* Hero */
 
-    .hero {
-      background:
-        radial-gradient(ellipse at 80% 20%, rgba(40,81,107,.42), transparent 42%),
-        linear-gradient(115deg, #101e32 0%, #172c43 62%, #203b52 100%);
-      padding: 105px 0 100px;
-      border-bottom: 1px solid var(--line);
-    }
+    /* Hero with background image */
 
+.hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10,20,35,.94) 0%,
+      rgba(10,20,35,.78) 50%,
+      rgba(10,20,35,.48) 100%
+    ),
+    url("cover.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 120px 0 110px;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
     .eyebrow {
       color: var(--champagne);
       text-transform: uppercase;
