@@ -82,19 +82,19 @@
     }
 
     .brand {
-  display: flex;
-  align-items: center;
-  min-width: 190px;
-  text-decoration: none;
-}
+      display: flex;
+      align-items: center;
+      min-width: 190px;
+      text-decoration: none;
+    }
 
-.brand img {
-  width: 260px;
-  height: 75px;
-  object-fit: contain;
-  object-position: left center;
-  display: block;
-}
+    .brand img {
+      width: 260px;
+      height: 75px;
+      object-fit: contain;
+      object-position: left center;
+      display: block;
+    }
 
     .sr-symbol {
       color: #123D5A;
@@ -124,8 +124,7 @@
     }
 
     .sr-sub {
-      color: red
-      ;
+      color: red;
       font-size: 25px;
       font-weight: 700;
     }
@@ -177,28 +176,25 @@
 
     /* Hero */
 
-    /* Hero with background image */
+    .hero {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(10,20,35,.94) 0%,
+          rgba(10,20,35,.78) 50%,
+          rgba(10,20,35,.48) 100%
+        ),
+        url("cover.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 120px 0 110px;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+    }
 
-.hero {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(10,20,35,.94) 0%,
-      rgba(10,20,35,.78) 50%,
-      rgba(10,20,35,.48) 100%
-    ),
-    url("cover.jpg");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  padding: 120px 0 110px;
-  min-height: 620px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid var(--line);
-}
     .eyebrow {
       color: var(--champagne);
       text-transform: uppercase;
@@ -337,6 +333,20 @@
       min-height: 190px;
     }
 
+    .company-link {
+      color: #D4AF37;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(176, 101, 0, 0.4);
+      transition: all 0.3s ease;
+      padding-bottom: 2px;
+    }
+
+    .company-link:hover {
+      color: #e8e5dc;
+      border-bottom-color: #e8e5dc;
+    }
+
     .service-number {
       color: var(--champagne);
       font-size: .72rem;
@@ -397,15 +407,15 @@
       align-items: center;
     }
 
-    .founder-photo {
-      min-height: 460px;
-      background: #243b52;
-      border: 1px solid rgba(184,167,125,.35);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
+   .founder-photo {
+  min-height: 460px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
     .founder-photo img {
       width: 100%;
@@ -438,23 +448,76 @@
       margin: 18px 0;
     }
 
-    .credentials {
+    /* Qualifications and certifications */
+
+    .qualifications {
+      margin-top: 30px;
+    }
+
+    .qualifications h3 {
+      font: 400 1.5rem Georgia, serif;
+      margin-bottom: 18px;
+      color: var(--cream);
+    }
+
+    .qualification-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px 20px;
-      margin-top: 24px;
+      gap: 12px;
     }
 
-    .credentials div {
-      border-top: 1px solid var(--line);
-      padding: 10px 0;
-      color: #d7dde4;
+    .qualification-item {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.035);
+      transition: border-color .3s ease;
+    }
+
+    .qualification-item:hover,
+    .qualification-item[open] {
+      border-color: var(--champagne);
+    }
+
+    .qualification-item summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 17px 18px;
+      color: var(--cream);
       font-size: .88rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
     }
 
-    .credentials div:before {
-      content: "— ";
+    .qualification-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .qualification-item summary::after {
+      content: "+";
       color: var(--champagne);
+      font-size: 1.35rem;
+      font-weight: 400;
+    }
+
+    .qualification-item[open] summary::after {
+      content: "−";
+    }
+
+    .qualification-content {
+      padding: 0 18px 18px;
+      color: var(--muted);
+      font-size: .84rem;
+      line-height: 1.8;
+    }
+
+    .qualification-content ul {
+      padding-left: 18px;
+    }
+
+    .qualification-content li {
+      padding: 3px 0;
     }
 
     /* Operational exposure */
@@ -609,14 +672,12 @@
       .topbar .wrap {
         justify-content: center;
         text-align: center;
-        
-        
       }
-      
+
       .brand img {
-  width: 210px;
-  height: 60px;
-}
+        width: 210px;
+        height: 60px;
+      }
 
       nav {
         min-height: 72px;
@@ -702,7 +763,7 @@
         height: 360px;
       }
 
-      .credentials {
+      .qualification-grid {
         grid-template-columns: 1fr;
       }
 
@@ -724,8 +785,8 @@
     <div class="wrap">
       <nav>
         <a class="brand" href="#home" aria-label="Protective Security Risk Management home">
-  <img src="Logo.JPG" alt="Protective Security Risk Management Logo">
-</a>
+          <img src="Logo.JPG" alt="Protective Security Risk Management Logo">
+        </a>
 
         <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 
@@ -938,11 +999,72 @@
             His professional focus is on strengthening operational standards through practical training, informed supervision and consistent application of workplace procedures.
           </p>
 
-          <div class="credentials">
-            <div>Grade 12 certificate</div>
-            <div>Code 10 driver’s licence</div>
-            <div>PSIRA Grade A certificate</div>
-            <div>Knowledge of Criminal Procedure Act processes</div>
+          <!-- QUALIFICATIONS ACCORDION -->
+
+          <div class="qualifications">
+            <h3>Qualifications &amp; Professional Development</h3>
+
+            <div class="qualification-grid">
+
+              <details class="qualification-item">
+                <summary>Education &amp; Qualifications</summary>
+                <div class="qualification-content">
+                  <ul>
+                    <li>Grade 12 Certificate</li>
+                    <li>Management Diploma in Business Law (NQF 6)</li>
+                    <li>Advanced Diploma in Safety Management (NQF 7)</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="qualification-item">
+                <summary>Security Qualifications</summary>
+                <div class="qualification-content">
+                  <ul>
+                    <li>PSIRA Grade A Security Provision Certificate</li>
+                    <li>Regional Security Risk Management Professional (SRMP-R)</li>
+                    <li>Country Security Risk Management Professional (SRMP-C)</li>
+                    <li>Security Risk Management Essentials</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="qualification-item">
+                <summary>ISO Certifications &amp; Cybersecurity</summary>
+                <div class="qualification-content">
+                  <ul>
+                    <li>ISO 9001 – Quality</li>
+                    <li>ISO 45001 – Occupational Health and Safety</li>
+                    <li>ISO 14001 – Environmental Management</li>
+                    <li>ISO 27001 – Information Security Associate</li>
+                    <li>Cybersecurity Operations Certification (ISC2)</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="qualification-item">
+                <summary>Professional Training</summary>
+                <div class="qualification-content">
+                  <ul>
+                    <li>SHE Principles and Procedures</li>
+                    <li>Adaptive Leadership</li>
+                    <li>Strategic Communication and Teamwork</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="qualification-item">
+                <summary>Additional Skills &amp; Competencies</summary>
+                <div class="qualification-content">
+                  <ul>
+                    <li>Knowledge of Criminal Procedure Act procedures</li>
+                    <li>Advanced computer user skills</li>
+                    <li>Code 10 Driver's Licence</li>
+                  </ul>
+                </div>
+              </details>
+
+            </div>
           </div>
         </div>
 
@@ -957,8 +1079,14 @@
           <div class="eyebrow">Operational exposure</div>
           <h2>Experience across demanding environments.</h2>
 
-          <p class="experience-copy">
-            Fananaye's operational experience includes exposure to security environments associated with BMW, MTN, Broll Properties and eThekwini Municipality, as well as operations in Welkom.
+          <p>
+            Fananaye's operational experience includes exposure to security environments associated with
+            <a class="company-link" href="https://www.bmw.co.za/" target="_blank" rel="noopener noreferrer">BMW</a>,
+            <a class="company-link" href="https://www.mtn.co.za/" target="_blank" rel="noopener noreferrer">MTN</a>,
+            <a class="company-link" href="https://www.broll.com/" target="_blank" rel="noopener noreferrer">Broll Properties</a>
+            and
+            <a class="company-link" href="https://www.durban.gov.za/" target="_blank" rel="noopener noreferrer">eThekwini Municipality</a>,
+            as well as operations in Welkom.
           </p>
         </div>
       </div>
@@ -1103,4 +1231,3 @@
 
 </body>
 </html>
-NG
