@@ -407,15 +407,15 @@
       align-items: center;
     }
 
-   .founder-photo {
-  min-height: 460px;
-  background: transparent;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
+    .founder-photo {
+      min-height: 460px;
+      background: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
 
     .founder-photo img {
       width: 100%;
@@ -532,6 +532,60 @@
       font-size: 1rem;
     }
 
+   /* Organisation logos */
+
+/* Organisation logos */
+
+.organisation-logos {
+  width: min(1160px, 90%);
+  margin: 35px auto 0;
+}
+
+.organisation-logos h3 {
+  color: var(--cream);
+  font: 400 1.5rem Georgia, serif;
+  margin-bottom: 22px;
+}
+
+.logo-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.logo-item {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: auto;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.logo-item img {
+  display: block;
+  width: 100%;
+  max-width: 65px;
+  height: 35px;
+  object-fit: contain;
+  background: transparent;
+}
+
+@media (max-width: 700px) {
+  .logo-grid {
+    gap: 3px;
+  }
+
+  .logo-item img {
+    max-width: 55px;
+    height: 30px;
+  }
+}
+
     /* Contact */
 
     .contact {
@@ -644,6 +698,68 @@
       justify-content: space-between;
       gap: 15px;
       flex-wrap: wrap;
+    }
+  
+  .footer-copyright {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+    /* Footer organisation logos */
+
+    .footer-organisations {
+      width: 100%;
+      margin-top: 22px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+  
+  .footer-copyright {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+    .footer-organisations p {
+      color: var(--muted);
+      font-size: .68rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      margin-bottom: 16px;
+    }
+
+    .footer-logo-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo-grid a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      min-width: 75px;
+    }
+
+    .footer-logo-grid img {
+      width: 100%;
+      max-width: 105px;
+      height: 38px;
+      object-fit: contain;
+      opacity: .85;
+      transition: .3s ease;
+    }
+
+    .footer-logo-grid a:hover img {
+      opacity: 1;
+      transform: translateY(-3px);
     }
 
     /* Responsive */
@@ -774,6 +890,31 @@
 
       form {
         padding: 22px;
+      }
+
+      .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .logo-item {
+        min-height: 100px;
+        padding: 15px;
+      }
+
+      .logo-item img {
+        height: 60px;
+      }
+
+      .footer-logo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .footer-logo-grid img {
+        max-width: 85px;
+        height: 35px;
       }
     }
   </style>
@@ -1010,7 +1151,6 @@
                 <summary>Education &amp; Qualifications</summary>
                 <div class="qualification-content">
                   <ul>
-                    
                     <li>Management Diploma in Business Law (NQF 6)</li>
                     <li>Advanced Diploma in Safety Management (NQF 7)</li>
                   </ul>
@@ -1053,8 +1193,6 @@
                 </div>
               </details>
 
-             
-
             </div>
           </div>
         </div>
@@ -1079,6 +1217,54 @@
             <a class="company-link" href="https://www.durban.gov.za/" target="_blank" rel="noopener noreferrer">eThekwini Municipality</a>,
             as well as operations in Welkom.
           </p>
+        </div>
+      </div>
+
+      <div class="organisation-logos">
+        <h3>Selected Organisations &amp; Environments</h3>
+
+        <div class="logo-grid">
+
+          <div class="logo-item">
+            <a class="logo-link" href="https://www.bmw.co.za/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Visit BMW South Africa">
+              <img src="Logos/bmw.jpg" alt="BMW">
+            </a>
+          </div>
+
+          <div class="logo-item">
+            <a class="logo-link" href="https://www.broll.com/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Visit Broll Properties">
+              <img src="Logos/broll.jpg" alt="Broll Properties">
+            </a>
+          </div>
+
+          <div class="logo-item">
+            <a class="logo-link" href="https://www.cellc.co.za/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Visit Cell C">
+              <img src="Logos/cellc.jpg" alt="Cell C">
+            </a>
+          </div>
+
+          <div class="logo-item">
+            <a class="logo-link" href="https://www.durban.gov.za/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Visit eThekwini Municipality">
+              <img src="Logos/ethekwini.jpg" alt="eThekwini Municipality">
+            </a>
+          </div>
+
+          <div class="logo-item">
+            <a class="logo-link" href="https://www.mtn.co.za/"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Visit MTN South Africa">
+              <img src="Logos/mtn.jpg" alt="MTN">
+            </a>
+          </div>
+
         </div>
       </div>
     </section>
@@ -1169,12 +1355,49 @@
 
   <!-- FOOTER -->
 
-  <footer>
-    <div class="wrap">
-      <span>© <span id="year"></span> Protective Security Risk Management. All rights reserved.</span>
-      <span>Security Risk Management • Training • Compliance</span>
+ 
+<footer>
+  <div class="wrap">
+
+    <div class="footer-organisations">
+
+      <p>Organisations &amp; Professional Environments</p>
+
+      <div class="footer-logo-grid">
+
+        <a href="https://www.bmw.co.za/" target="_blank" rel="noopener noreferrer" aria-label="BMW South Africa">
+          <img src="Logos/bmw.jpg" alt="BMW">
+        </a>
+
+        <a href="https://www.broll.com/" target="_blank" rel="noopener noreferrer" aria-label="Broll Properties">
+          <img src="Logos/broll.jpg" alt="Broll">
+        </a>
+
+        <a href="https://www.cellc.co.za/" target="_blank" rel="noopener noreferrer" aria-label="Cell C">
+          <img src="Logos/cellc.jpg" alt="Cell C">
+        </a>
+
+        <a href="https://www.durban.gov.za/" target="_blank" rel="noopener noreferrer" aria-label="eThekwini Municipality">
+          <img src="Logos/ethekwini.jpg" alt="eThekwini">
+        </a>
+
+        <a href="https://www.mtn.co.za/" target="_blank" rel="noopener noreferrer" aria-label="MTN South Africa">
+          <img src="Logos/mtn.jpg" alt="MTN">
+        </a>
+
+      </div>
     </div>
-  </footer>
+
+    <!-- Copyright at the very bottom -->
+    <span class="footer-copyright">
+      © <span id="year"></span> Protective Security Risk Management.
+      <br>
+      All rights reserved.
+    </span>
+
+  </div>
+</footer>
+
 
   <script>
     const menuToggle = document.getElementById('menuToggle');
