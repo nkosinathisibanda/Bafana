@@ -240,15 +240,15 @@
     }
 
     .hero-note {
-      margin-top: 60px;
-      padding-top: 22px;
-      border-top: 1px solid var(--line);
-      display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
-      color: var(--muted);
-      font-size: .82rem;
-    }
+  margin-top: 60px;
+  padding-top: 22px;
+  border-top: none;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: .82rem;
+}
 
     .hero-note strong {
       display: block;
@@ -315,10 +315,21 @@
     /* Services */
 
     .services {
-      background: #111f33;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
+  background:
+    linear-gradient(
+      rgba(10, 20, 35, 0.90),
+      rgba(10, 20, 35, 0.93)
+    ),
+    url("services.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
 
     .service-grid {
       display: grid;
@@ -402,25 +413,27 @@
 
     .founder-grid {
       display: grid;
-      grid-template-columns: .82fr 1.18fr;
-      gap: 64px;
+      grid-template-columns: 1fr 320px;
+      gap: 55px;
       align-items: center;
     }
 
     .founder-photo {
-      min-height: 460px;
-      background: transparent;
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
       overflow: hidden;
+      justify-self: center;
+      order: 2;
+      border: 3px solid rgba(184,167,125,.5);
+      flex-shrink: 0;
     }
 
     .founder-photo img {
       width: 100%;
-      height: 460px;
+      height: 100%;
       object-fit: cover;
+      object-position: center;
       display: block;
     }
 
@@ -429,6 +442,10 @@
       text-align: center;
       color: #c4cfda;
       font-size: .9rem;
+    }
+
+    .founder-copy {
+      order: 1;
     }
 
     .founder-copy h2 {
@@ -523,8 +540,18 @@
     /* Operational exposure */
 
     .experience {
-      background: #0d1929;
-    }
+  background:
+    linear-gradient(
+      rgba(10, 20, 35, 0.88),
+      rgba(10, 20, 35, 0.93)
+    ),
+    url("experience.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
 
     .experience-copy {
       max-width: 850px;
@@ -532,59 +559,46 @@
       font-size: 1rem;
     }
 
-   /* Organisation logos */
+    /* Organisation logos */
 
-/* Organisation logos */
+    .organisation-logos {
+      width: min(1160px, 90%);
+      margin: 35px auto 0;
+    }
 
-.organisation-logos {
-  width: min(1160px, 90%);
-  margin: 35px auto 0;
-}
+    .organisation-logos h3 {
+      color: var(--cream);
+      font: 400 1.5rem Georgia, serif;
+      margin-bottom: 22px;
+    }
 
-.organisation-logos h3 {
-  color: var(--cream);
-  font: 400 1.5rem Georgia, serif;
-  margin-bottom: 22px;
-}
+    .logo-grid {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+      flex-wrap: nowrap;
+      width: 100%;
+    }
 
-.logo-grid {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 8px;
-  flex-wrap: nowrap;
-  width: 100%;
-}
+    .logo-item {
+      flex: 1 1 0;
+      min-width: 0;
+      min-height: auto;
+      padding: 0;
+      background: transparent;
+      border: none;
+    }
 
-.logo-item {
-  flex: 1 1 0;
-  min-width: 0;
-  min-height: auto;
-  padding: 0;
-  background: transparent;
-  border: none;
-}
-
-.logo-item img {
-  display: block;
-  width: 100%;
-  max-width: 65px;
-  height: 35px;
-  object-fit: contain;
-  background: transparent;
-}
-
-@media (max-width: 700px) {
-  .logo-grid {
-    gap: 3px;
-  }
-
-  .logo-item img {
-    max-width: 55px;
-    height: 30px;
-  }
-}
+    .logo-item img {
+      display: block;
+      width: 100%;
+      max-width: 65px;
+      height: 35px;
+      object-fit: contain;
+      background: transparent;
+    }
 
     /* Contact */
 
@@ -699,15 +713,15 @@
       gap: 15px;
       flex-wrap: wrap;
     }
-  
-  .footer-copyright {
-  display: block;
-  width: 100%;
-  text-align: center;
-  margin-top: 20px;
-  padding-top: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
+
+    .footer-copyright {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
 
     /* Footer organisation logos */
 
@@ -717,12 +731,6 @@
       padding-top: 22px;
       border-top: 1px solid var(--line);
     }
-  
-  .footer-copyright {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
 
     .footer-organisations p {
       color: var(--muted);
@@ -765,6 +773,7 @@
     /* Responsive */
 
     @media (max-width: 900px) {
+
       .service-grid {
         grid-template-columns: repeat(2,1fr);
       }
@@ -780,11 +789,19 @@
       }
 
       .founder-photo {
-        max-width: 520px;
+        width: 260px;
+        height: 260px;
+        order: 0;
+        max-width: 100%;
+      }
+
+      .founder-copy {
+        order: 1;
       }
     }
 
     @media (max-width: 700px) {
+
       .topbar .wrap {
         justify-content: center;
         text-align: center;
@@ -873,10 +890,20 @@
         gap: 24px 18px;
       }
 
-      .founder-photo,
-      .founder-photo img {
-        min-height: 360px;
-        height: 360px;
+      .founder-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .founder-photo {
+        width: 230px;
+        height: 230px;
+        margin: 0 auto;
+        order: 0;
+      }
+
+      .founder-copy {
+        order: 1;
       }
 
       .qualification-grid {
@@ -965,6 +992,7 @@
         </div>
 
         <div class="hero-note">
+        
           <div>
             <strong>08 years</strong>
             Security industry experience
@@ -1025,27 +1053,27 @@
         <div class="service-grid">
 
           <article class="service-card">
-            <span class="service-number">01 / TRAINING</span>
+            <span class="service-number">01 / GUARDING SERVICES</span>
+            <h3>Security Risk Management Training</h3>
+            <p>Where we will offer security officers service and sevilience camera installations.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">02 / TRAINING</span>
             <h3>Security Risk Management Training</h3>
             <p>Understanding security risks, identifying vulnerabilities and applying practical risk-control measures.</p>
           </article>
 
           <article class="service-card">
-            <span class="service-number">02 / COMPLIANCE</span>
+            <span class="service-number">03 / COMPLIANCE</span>
             <h3>Client SLA Agreement Compliance Training</h3>
             <p>Helping teams understand service-level agreements, client expectations and operational standards.</p>
           </article>
 
           <article class="service-card">
-            <span class="service-number">03 / LEADERSHIP</span>
+            <span class="service-number">04 / LEADERSHIP</span>
             <h3>Security Site Supervisors Specialised Training</h3>
             <p>Strengthening site supervision, reporting, team coordination and decision-making.</p>
-          </article>
-
-          <article class="service-card">
-            <span class="service-number">04 / TECHNOLOGY</span>
-            <h3>Information Technology for Supervisors</h3>
-            <p>Building confidence in the digital tools and information processes used in supervision.</p>
           </article>
 
           <article class="service-card">
@@ -1067,9 +1095,9 @@
           </article>
 
           <article class="service-card">
-            <span class="service-number">08 / SUPPORT</span>
-            <h3>Disciplinary Action Handling Services</h3>
-            <p>Practical assistance with disciplinary matters and procedural handling, subject to agreed scope.</p>
+            <span class="service-number">08 / TECHNOLOGY</span>
+            <h3>Information Technology for Supervisors</h3>
+            <p>Building confidence in the digital tools and information processes used in supervision.</p>
           </article>
 
         </div>
@@ -1129,7 +1157,7 @@
 
         <div class="founder-copy">
           <div class="eyebrow">Leadership</div>
-          <div class="role">Founder &amp; Principal Consultant</div>
+          <div class="role">The Founder &amp; CEO</div>
           <h2>Fananaye Gumede</h2>
 
           <p>
@@ -1203,70 +1231,32 @@
     <!-- OPERATIONAL EXPOSURE -->
 
     <section class="experience" id="experience">
+
       <div class="wrap">
         <div class="section-head">
-          <div class="eyebrow">Operational exposure</div>
+          <div class="eyebrow">Operational Exposure</div>
+
           <h2>Experience across demanding environments.</h2>
 
           <p>
-            Fananaye's operational experience includes exposure to security environments associated with
-            <a class="company-link" href="https://www.bmw.co.za/" target="_blank" rel="noopener noreferrer">BMW</a>,
-            <a class="company-link" href="https://www.mtn.co.za/" target="_blank" rel="noopener noreferrer">MTN</a>,
-            <a class="company-link" href="https://www.broll.com/" target="_blank" rel="noopener noreferrer">Broll Properties</a>
-            and
-            <a class="company-link" href="https://www.durban.gov.za/" target="_blank" rel="noopener noreferrer">eThekwini Municipality</a>,
-            as well as operations in Welkom.
+            The founder and CEO's operational experience includes
+            exposure to security environments associated with
+            leading corporate, public-sector and academic organisations,
+            including:
           </p>
+
+          <p><br></p>
+
+          <p>1. BMW</p>
+          <p>2. Broll</p>
+          <p>3. Telkom</p>
+          <p>4. eThekwini Municipality</p>
+          <p>5. MTN</p>
+          <p>6. KwaZulu-Natal Department of Health</p>
+          <p>7. University of Johannesburg</p>
         </div>
       </div>
 
-      <div class="organisation-logos">
-        <h3>Selected Organisations &amp; Environments</h3>
-
-        <div class="logo-grid">
-
-          <div class="logo-item">
-            <a class="logo-link" href="https://www.bmw.co.za/"
-               target="_blank" rel="noopener noreferrer"
-               aria-label="Visit BMW South Africa">
-              <img src="bmw.jpg" alt="BMW">
-            </a>
-          </div>
-
-          <div class="logo-item">
-            <a class="logo-link" href="https://www.broll.com/"
-               target="_blank" rel="noopener noreferrer"
-               aria-label="Visit Broll Properties">
-              <img src="broll.jpg" alt="Broll Properties">
-            </a>
-          </div>
-
-          <div class="logo-item">
-            <a class="logo-link" href="https://www.cellc.co.za/"
-               target="_blank" rel="noopener noreferrer"
-               aria-label="Visit Cell C">
-              <img src="cellc.jpg" alt="Cell C">
-            </a>
-          </div>
-
-          <div class="logo-item">
-            <a class="logo-link" href="https://www.durban.gov.za/"
-               target="_blank" rel="noopener noreferrer"
-               aria-label="Visit eThekwini Municipality">
-              <img src="ethekwini.jpg" alt="eThekwini Municipality">
-            </a>
-          </div>
-
-          <div class="logo-item">
-            <a class="logo-link" href="https://www.mtn.co.za/"
-               target="_blank" rel="noopener noreferrer"
-               aria-label="Visit MTN South Africa">
-              <img src="mtn.jpg" alt="MTN">
-            </a>
-          </div>
-
-        </div>
-      </div>
     </section>
 
     <!-- CONTACT -->
@@ -1355,49 +1345,54 @@
 
   <!-- FOOTER -->
 
- 
-<footer>
-  <div class="wrap">
+  <footer>
+    <div class="wrap">
 
-    <div class="footer-organisations">
+      <div class="footer-organisations">
 
-      <p>Organisations &amp; Professional Environments</p>
+        <p>Organisations &amp; Professional Environments</p>
 
-      <div class="footer-logo-grid">
+        <div class="footer-logo-grid">
 
-        <a href="https://www.bmw.co.za/" target="_blank" rel="noopener noreferrer" aria-label="BMW South Africa">
-          <img src="bmw.jpg" alt="BMW">
-        </a>
+          <a href="https://www.bmw.co.za/" target="_blank" rel="noopener noreferrer" aria-label="BMW">
+            <img src="bmw.jpg" alt="BMW">
+          </a>
 
-        <a href="https://www.broll.com/" target="_blank" rel="noopener noreferrer" aria-label="Broll Properties">
-          <img src="broll.jpg" alt="Broll">
-        </a>
+          <a href="https://www.broll.com/" target="_blank" rel="noopener noreferrer" aria-label="Broll">
+            <img src="broll.jpg" alt="Broll">
+          </a>
 
-        <a href="https://www.cellc.co.za/" target="_blank" rel="noopener noreferrer" aria-label="Cell C">
-          <img src="cellc.jpg" alt="Cell C">
-        </a>
+          <a href="https://www.telkom.co.za/" target="_blank" rel="noopener noreferrer" aria-label="Telkom">
+            <img src="telkom.jpg" alt="Telkom">
+          </a>
 
-        <a href="https://www.durban.gov.za/" target="_blank" rel="noopener noreferrer" aria-label="eThekwini Municipality">
-          <img src="ethekwini.jpg" alt="eThekwini">
-        </a>
+          <a href="https://www.durban.gov.za/" target="_blank" rel="noopener noreferrer" aria-label="eThekwini Municipality">
+            <img src="ethekwini.jpg" alt="eThekwini Municipality">
+          </a>
 
-        <a href="https://www.mtn.co.za/" target="_blank" rel="noopener noreferrer" aria-label="MTN South Africa">
-          <img src="mtn.jpg" alt="MTN">
-        </a>
+          <a href="https://www.mtn.co.za/" target="_blank" rel="noopener noreferrer" aria-label="MTN">
+            <img src="mtn.jpg" alt="MTN">
+          </a>
 
+          <a href="https://www.kznhealth.gov.za/" target="_blank" rel="noopener noreferrer" aria-label="KwaZulu-Natal Department of Health">
+            <img src="kzn-health.jpg" alt="KwaZulu-Natal Health">
+          </a>
+
+          <a href="https://www.uj.ac.za/" target="_blank" rel="noopener noreferrer" aria-label="University of Johannesburg">
+            <img src="uj.jpg" alt="University of Johannesburg">
+          </a>
+
+        </div>
       </div>
+
+      <span class="footer-copyright">
+        © <span id="year"></span> Protective Security Risk Management.
+        <br>
+        All rights reserved.
+      </span>
+
     </div>
-
-    <!-- Copyright at the very bottom -->
-    <span class="footer-copyright">
-      © <span id="year"></span> Protective Security Risk Management.
-      <br>
-      All rights reserved.
-    </span>
-
-  </div>
-</footer>
-
+  </footer>
 
   <script>
     const menuToggle = document.getElementById('menuToggle');
