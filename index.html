@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -945,6 +944,101 @@
         height: 35px;
       }
     }
+  
+  
+/* Remove horizontal lines between website sections */
+
+.hero,
+.services,
+.founder,
+.experience,
+.approach,
+#about,
+#approach,
+#experience,
+#contact {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* Remove footer divider lines */
+.footer-copyright,
+.footer-organisations {
+  border-top: none !important;
+}
+
+/* Remove other section divider lines */
+.topbar,
+header {
+  border-bottom: none !important;
+}
+
+
+/* Security quote on desktop */
+/* Desktop: heading and quote side by side */
+
+@media (min-width: 901px) {
+  #approach .wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    column-gap: 50px;
+    row-gap: 35px;
+    align-items: start;
+  }
+
+  #approach .section-head {
+    grid-column: 1;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  #approach .approach-quote {
+    grid-column: 2;
+    grid-row: 1;
+    position: static;
+    width: 100%;
+    min-height: 210px;
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: rgba(255,255,255,.035);
+  }
+
+  #approach .approach-grid {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Quote typography */
+
+.approach-quote p {
+  font: italic clamp(1.2rem, 2vw, 1.8rem)/1.5 Georgia, serif;
+  color: var(--cream);
+}
+
+.quote-mark {
+  color: #b51f2a;
+  font: bold 4rem Georgia, serif;
+  line-height: .7;
+  align-self: flex-start;
+}
+
+.quote-mark.closing {
+  align-self: flex-end;
+}
+
+/* Hide quote on mobile */
+
+@media (max-width: 900px) {
+  #approach .approach-quote {
+    display: none;
+  }
+}
+  
+  
   </style>
 </head>
 
@@ -984,7 +1078,7 @@
         <h1>Stronger operations.<br><span>Safer environments.</span></h1>
 
         <p class="hero-copy">
-          Practical security risk management, compliance training and operational support for organisations that need capable people, clear procedures and accountable performance.
+          We provide practical security risk management, compliance training and operational support for organisations that need capable people, clear procedures and accountable performance.
         </p>
 
         <div class="hero-actions">
@@ -1050,6 +1144,8 @@
           <h2>Focused services for the demands of security operations.</h2>
           <p>Training and support can be tailored to organisational requirements, site conditions and operational responsibilities.</p>
         </div>
+        
+        
 
         <div class="service-grid">
 
@@ -1079,7 +1175,7 @@
 
           <article class="service-card">
             <span class="service-number">05 / MANAGEMENT</span>
-            <h3>Security Officers’ Compliance Management</h3>
+            <h3>Security Officer Customer Service Training</h3>
             <p>Supporting consistent standards, conduct, deployment and compliance across security teams.</p>
           </article>
 
@@ -1091,13 +1187,13 @@
 
           <article class="service-card">
             <span class="service-number">07 / DISCIPLINE</span>
-            <h3>Crucial Steps for Disciplinary Action</h3>
+            <h3>Disciplinary Action Training</h3>
             <p>Training on fair, consistent and properly documented disciplinary processes.</p>
           </article>
 
           <article class="service-card">
             <span class="service-number">08 / TECHNOLOGY</span>
-            <h3>Information Technology for Supervisors</h3>
+            <h3>Information Technology For Security Training</h3>
             <p>Building confidence in the digital tools and information processes used in supervision.</p>
           </article>
 
@@ -1115,6 +1211,15 @@
           <p>Each engagement starts with understanding the organisation’s needs and ends with recommendations or training that can be put into practice.</p>
         </div>
 
+        <div class="approach-quote">
+  <span class="quote-mark">“</span>
+  <p>
+    Security is not the absence of danger,
+    but the presence of preparedness.
+  </p>
+  <span class="quote-mark closing">”</span>
+</div>
+        
         <div class="approach-grid">
           <div class="step">
             <b>STEP 01</b>
@@ -1243,16 +1348,16 @@
             The founder and CEO's operational experience includes
             exposure to security environments associated with
             leading corporate, public-sector and academic organisations,
-            including:
+            which are:
           </p>
 
           <p><br></p>
 
-          <p>1. BMW</p>
-          <p>2. Broll</p>
-          <p>3. Telkom</p>
+          <p>1. BMW Group South African</p>
+          <p>2. Broll properties</p>
+          <p>3. Telkom SA</p>
           <p>4. eThekwini Municipality</p>
-          <p>5. MTN</p>
+          <p>5. MTN Group</p>
           <p>6. KwaZulu-Natal Department of Health</p>
           <p>7. University of Johannesburg</p>
         </div>
@@ -1351,11 +1456,11 @@
 
       <div class="footer-organisations">
 
-        <p>Organisations &amp; Professional Environments</p>
+        <p>Organisations &amp; Professional Environments Our CEO Served Under</p>
 
         <div class="footer-logo-grid">
 
-          <a href="https://www.bmw.co.za/" target="_blank" rel="noopener noreferrer" aria-label="BMW">
+          <a href="https://www.bmwgroup.jobs/za/en/location/headquarters-midrand.html" target="_blank" rel="noopener noreferrer" aria-label="BMW">
             <img src="bmw.jpg" alt="BMW">
           </a>
 
@@ -1363,7 +1468,7 @@
             <img src="broll.jpg" alt="Broll">
           </a>
 
-          <a href="https://www.telkom.co.za/" target="_blank" rel="noopener noreferrer" aria-label="Telkom">
+          <a href="https://group.telkom.co.za/" target="_blank" rel="noopener noreferrer" aria-label="Telkom">
             <img src="telkom.jpg" alt="Telkom">
           </a>
 
@@ -1375,7 +1480,7 @@
             <img src="mtn.jpg" alt="MTN">
           </a>
 
-          <a href="https://www.kznhealth.gov.za/" target="_blank" rel="noopener noreferrer" aria-label="KwaZulu-Natal Department of Health">
+          <a href="https://www.kznhealth.gov.za/provincial-hospitals/addington-hospital/" target="_blank" rel="noopener noreferrer" aria-label="KwaZulu-Natal Department of Health">
             <img src="kzn-health.jpg" alt="KwaZulu-Natal Health">
           </a>
 
