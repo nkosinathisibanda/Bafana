@@ -50,7 +50,7 @@
 
     .topbar {
       background: #0d1a2b;
-      border-bottom: 1px solid var(--line);
+
       color: var(--muted);
       font-size: .82rem;
       padding: 9px 0;
@@ -192,7 +192,7 @@
       min-height: 620px;
       display: flex;
       align-items: center;
-      border-bottom: 1px solid var(--line);
+
     }
 
     .eyebrow {
@@ -327,8 +327,6 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
 
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
 }
 
     .service-grid {
@@ -406,10 +404,8 @@
     /* Founder */
 
     .founder {
-      background: linear-gradient(115deg,#172b42,#101e32);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
+  background: linear-gradient(115deg,#172b42,#101e32);
+}
 
     .founder-grid {
       display: grid;
@@ -944,101 +940,157 @@
         height: 35px;
       }
     }
-  
-  
-/* Remove horizontal lines between website sections */
 
-.hero,
-.services,
-.founder,
-.experience,
-.approach,
-#about,
-#approach,
-#experience,
-#contact {
-  border-top: none !important;
-  border-bottom: none !important;
-}
+    /* Remove horizontal lines between website sections */
 
-/* Remove footer divider lines */
-.footer-copyright,
-.footer-organisations {
-  border-top: none !important;
-}
+    .hero,
+    .services,
+    .founder,
+    .experience,
+    .approach,
+    #about,
+    #approach,
+    #experience,
+    #contact {
+      border-top: none !important;
+      border-bottom: none !important;
+    }
 
-/* Remove other section divider lines */
-.topbar,
-header {
-  border-bottom: none !important;
-}
+    /* Remove footer divider lines */
+    .footer-copyright,
+    .footer-organisations {
+      border-top: none !important;
+    }
 
+    /* Remove other section divider lines */
+    .topbar,
+    header {
+      border-bottom: none !important;
+    }
 
-/* Security quote on desktop */
-/* Desktop: heading and quote side by side */
+    /* Security quote on desktop */
+    /* Desktop: heading and quote side by side */
 
-@media (min-width: 901px) {
-  #approach .wrap {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-    column-gap: 50px;
-    row-gap: 35px;
-    align-items: start;
-  }
+    @media (min-width: 901px) {
+      #approach .wrap {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+        column-gap: 50px;
+        row-gap: 35px;
+        align-items: start;
+      }
 
-  #approach .section-head {
-    grid-column: 1;
-    max-width: 100%;
-    margin: 0;
-  }
+      #approach .section-head {
+        grid-column: 1;
+        max-width: 100%;
+        margin: 0;
+      }
 
-  #approach .approach-quote {
-    grid-column: 2;
-    grid-row: 1;
-    position: static;
-    width: 100%;
-    min-height: 210px;
-    padding: 25px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background: rgba(255,255,255,.035);
-  }
+      #approach .approach-quote {
+        grid-column: 2;
+        grid-row: 1;
+        position: static;
+        width: 100%;
+        min-height: 210px;
+        padding: 25px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background: rgba(255,255,255,.035);
+      }
 
-  #approach .approach-grid {
-    grid-column: 1 / -1;
-  }
-}
+      #approach .approach-grid {
+        grid-column: 1 / -1;
+      }
+    }
 
-/* Quote typography */
+    /* Quote typography */
 
-.approach-quote p {
-  font: italic clamp(1.2rem, 2vw, 1.8rem)/1.5 Georgia, serif;
-  color: var(--cream);
-}
+    .approach-quote p {
+      font: italic clamp(1.2rem, 2vw, 1.8rem)/1.5 Georgia, serif;
+      color: var(--cream);
+    }
 
-.quote-mark {
-  color: #b51f2a;
-  font: bold 4rem Georgia, serif;
-  line-height: .7;
-  align-self: flex-start;
-}
+    .quote-mark {
+      color: #b51f2a;
+      font: bold 4rem Georgia, serif;
+      line-height: .7;
+      align-self: flex-start;
+    }
 
-.quote-mark.closing {
-  align-self: flex-end;
-}
+    .quote-mark.closing {
+      align-self: flex-end;
+    }
 
-/* Hide quote on mobile */
+    /* Hide quote on mobile */
 
-@media (max-width: 900px) {
-  #approach .approach-quote {
-    display: none;
-  }
-}
-  
-  
+    @media (max-width: 900px) {
+      #approach .approach-quote {
+        display: none;
+      }
+    }
+
+    /* Completely remove divider lines around founder and contact sections */
+
+    .founder,
+    #founder,
+    .contact,
+    #contact,
+    .experience,
+    #experience {
+      border-top: none !important;
+      border-bottom: none !important;
+      outline: none !important;
+    }
+
+    /* Remove any pseudo-element dividers */
+    .founder::before,
+    .founder::after,
+    .contact::before,
+    .contact::after {
+      display: none !important;
+      border: none !important;
+    }
+
+    /* Prevent shadows from appearing like divider lines */
+    .founder,
+    .contact {
+      box-shadow: none !important;
+    }
+
+    /* Remove founder-to-experience dividing line completely */
+
+    #founder,
+    #experience {
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    #founder + #experience {
+      border-top: none !important;
+      margin-top: 0 !important;
+    }
+
+    #founder::before,
+    #founder::after,
+    #experience::before,
+    #experience::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    /* Remove thin lines between all main sections */
+
+    main > section {
+      border-top: none !important;
+      border-bottom: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
   </style>
 </head>
 
@@ -1087,7 +1139,7 @@ header {
         </div>
 
         <div class="hero-note">
-        
+
           <div>
             <strong>17 years</strong>
             Security industry experience
@@ -1144,8 +1196,8 @@ header {
           <h2>Focused services for the demands of security operations.</h2>
           <p>Training and support can be tailored to organisational requirements, site conditions and operational responsibilities.</p>
         </div>
-        
-        
+
+
 
         <div class="service-grid">
 
@@ -1219,7 +1271,7 @@ header {
   </p>
   <span class="quote-mark closing">”</span>
 </div>
-        
+
         <div class="approach-grid">
           <div class="step">
             <b>STEP 01</b>
@@ -1356,10 +1408,11 @@ header {
           <p>1. BMW Group South African</p>
           <p>2. Broll properties</p>
           <p>3. Telkom SA</p>
-          <p>4. eThekwini Municipality</p>
-          <p>5. MTN Group</p>
-          <p>6. KwaZulu-Natal Department of Health</p>
-          <p>7. University of Johannesburg</p>
+          <p>5. Hilton Hotel</p>
+          <p>6. eThekwini Municipality</p>
+          <p>7. MTN Group</p>
+          <p>8. KwaZulu-Natal Department of Health</p>
+          <p>9. University of Johannesburg</p>
         </div>
       </div>
 
@@ -1470,6 +1523,10 @@ header {
 
           <a href="https://group.telkom.co.za/" target="_blank" rel="noopener noreferrer" aria-label="Telkom">
             <img src="telkom.jpg" alt="Telkom">
+          </a>
+
+          <a href="https://hilton.com/" target="_blank" rel="noopener noreferrer" aria-label="Hilton">
+            <img src="hilton.jpg" alt="Hilton">
           </a>
 
           <a href="https://www.durban.gov.za/" target="_blank" rel="noopener noreferrer" aria-label="eThekwini Municipality">
