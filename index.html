@@ -1091,6 +1091,30 @@
       box-shadow: none !important;
     }
 
+  /* Remove divider between operational exposure and contact */
+
+#experience,
+#contact,
+.experience,
+.contact {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#experience + #contact {
+  border-top: none !important;
+  margin-top: 0 !important;
+}
+
+#experience::before,
+#experience::after,
+#contact::before,
+#contact::after {
+  content: none !important;
+  display: none !important;
+}
+  
   </style>
 </head>
 
